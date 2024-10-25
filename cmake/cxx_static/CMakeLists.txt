@@ -1,4 +1,4 @@
-find_package(CapnProto REQUIRED)
+# find_package(CapnProto REQUIRED)
 set(PROTOS LogicalNetlist.capnp PhysicalNetlist.capnp DeviceResources.capnp References.capnp)
 
 set(INTERCHANGE_SCHEMA_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../../interchange)
@@ -20,7 +20,7 @@ add_custom_target(
 set(CAPNPC_IMPORT_DIRS)
 list(APPEND CAPNPC_IMPORT_DIRS ${CMAKE_CURRENT_BINARY_DIR}/schema)
 
-set(CAPNPC_OUTPUT_DIR "${CMAKE_CURRENT_BINARY_DIR}/../../interchange")
+set(CAPNPC_OUTPUT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../../interchange")
 
 add_custom_command(
     OUTPUT ${CAPNPC_OUTPUT_DIR}
